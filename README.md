@@ -29,13 +29,14 @@ docker-compose up --build
 ```sh
 docker_test$ tree
 .
-├── Dockerfile
 ├── README.md
-├── app
-│   ├── ebury.py
-│   └── tests.py
-├── cmd.sh
-└── docker-compose.yml
+└── docker_test
+    ├── Dockerfile
+    ├── app
+    │   ├── ebury.py
+    │   └── tests.py
+    ├── cmd.sh
+    └── docker-compose.yml
 ```
 
 ### OS version
