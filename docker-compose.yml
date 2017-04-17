@@ -1,0 +1,25 @@
+#WRITE COMPOSE DEFINING REDIS, DNMONSTER AND 
+#FOR APP: 
+#   - EXPOSE PORTS
+#   - SET ENVIRONMENT VARIABLE ENV TO DEV
+#   - MOUNT app VOLUME TO /app FOLDER INSIDE CONTAINER
+#   - LINK REDIS AND DNMONSTER CONTAINERS
+ebury:
+  build: .
+  ports:
+    - "9191:9191"
+    - "9090:9090"
+    - "5000:5000"
+  environment:
+    ENV: DEV
+  volumes:
+    - ./app:/app
+  links:
+    - dnmonster
+    - redis
+
+dnmonster:
+  image: amouat/dnmonster:1.0
+
+redis:
+  image: redis:3.0
