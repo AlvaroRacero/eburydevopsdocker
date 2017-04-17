@@ -16,8 +16,9 @@ Repository for the Ebury's Docker test.
 ### How to run
 1. Install Docker 1.11 or higher.
 2. Clone EBURY DEVOPS DOCKER proyect.
-3. Change the enviorement in docker-compose.yml.
-4. Run:
+3. Move to the working directory.
+4. Change the enviorement in docker-compose.yml.
+5. Run:
 
 ```sh
 docker-compose up --build
